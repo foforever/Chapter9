@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class Test9_6 {
+
+	public static void main(String[] args) {
+		 // new一个100 000个数字的数组
+        int[] arr = new int[100000];
+        Random rd = new Random();
+        for (int i = 0 ; i < arr.length ; i++){
+            arr[i] = rd.nextInt(100000);
+        }
+        // 计时
+        StopWatch9_6 sw = new StopWatch9_6();
+        Arrays.sort(arr);
+        sw.stop();
+        // 输出结果
+        System.out.println("执行了" + sw.getElaspsedTime() + "毫秒");
+	}
+
+}
